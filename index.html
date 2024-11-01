@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evolvi._.vids - Video Editing & Social Media Management</title>
+    <style>
+        /* Basic Styling */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #eaf2f8; /* Light background */
+            color: #333; 
+            overflow-x: hidden;
+        }
+        header { 
+            background-color: #000; /* Black header color */
+            color: #ffffff; 
+            padding: 1rem; 
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.3s; /* Smooth transition */
+            top: 0; /* Initially at the top */
+        }
+        header h1 { 
+            font-size: 2.5rem; /* Font size for header */
+            margin: 0; 
+            text-transform: uppercase; /* Capitalize header text */
+            line-height: 1.5; /* Increased line spacing */
+        }
+        nav a { 
+            color: #ffcc00; /* Yellow links */
+            margin: 0 15px; 
+            text-decoration: none; 
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #f8c146; }
+        .container { 
+            width: 90%; 
+            margin: auto; 
+            padding-top: 100px; /* Increased to prevent header overlap */
+            padding-bottom: 60px; /* To prevent footer overlap */
+        }
+
+        /* Hero Section */
+        .hero { 
+            background: url('https://source.unsplash.com/1600x900/?videography,editing') no-repeat center center; 
+            background-size: cover; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 8rem 0;
+            position: relative; /* Added for z-index stacking */
+        }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin: 0; 
+            color: #ffffff; /* White color for the main heading */
+        }
+        .hero p { 
+            font-size: 1.5rem; 
+            margin: 1rem 0;
+            color: #ffffff; /* White color for the subtitle */
+            line-height: 1.5; /* Improved line height for readability */
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 31, 63, 0.7); /* Semi-transparent navy blue */
+            z-index: 1; /* Behind the text */
+        }
+        .hero h1, .hero p {
+            position: relative; /* Position text above the overlay */
+            z-index: 2; /* Above the background overlay */
+        }
+
+        /* Section Styling */
+        .section { 
+            padding: 3rem 0; 
+        }
+        .section h2 { 
+            text-align: center; 
+            margin-bottom: 2rem; 
+            color: #ff6f61; /* Bright color for headings */
+            font-size: 2.5rem; /* Larger font size for section titles */
+            text-transform: uppercase; /* Uppercase for emphasis */
+        }
+
+        /* Portfolio and Services Section */
+        .portfolio, .services { 
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            margin-top: 50px; /* Ensures it’s not overlapped by the hero section */
+        }
+        .card { 
+            background: #ffffff; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            margin: 1rem; 
+            padding: 1.5rem; 
+            flex-basis: 30%; 
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #ff6f61; /* Border for distinction */
+            box-shadow: 0 0 15px rgba(255, 111, 97, 0.7); /* Glow effect */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* About Section */
+        #about p { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            line-height: 1.6; 
+            text-align: center; 
+            padding: 0 1rem; 
+            font-size: 1.1rem;
+        }
+
+        /* Footer Styling */
+        footer { 
+            background-color: #000; /* Black footer color */
+            color: #ffffff; 
+            text-align: center; 
+            padding: 1rem 0; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%;
+        }
+        footer a { 
+            color: #ffcc00; /* Yellow links in footer */
+            margin: 0 10px; 
+            text-decoration: none; 
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .card { 
+                flex-basis: 100%; 
+                margin: 0.5rem 0; 
+            }
+        }
+
+        /* Services Section Background */
+        .services-section {
+            background-color: #f4f4f4; /* Light gray background for services */
+            padding: 3rem 0; /* Padding for spacing */
+        }
+
+        /* Portfolio Section Background */
+        .portfolio-section {
+            background-color: #ffffff; /* White background for portfolio */
+            padding: 3rem 0; /* Padding for spacing */
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1>Evolvi._.Vids</h1> <!-- Capitalized header -->
+    <nav>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="https://www.instagram.com/evolvi._.vids/" target="_blank">Instagram</a> <!-- Instagram Link -->
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Transforming Moments into Masterpieces</h1>
+    <p>Professional Video Editing & Social Media Management</p>
+</section>
+
+<div class="container">
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio">
+            <div class="card">
+                <h3>Reels</h3>
+                <p>Engaging Instagram reels for your brand.</p>
+            </div>
+            <div class="card">
+                <h3>Story Edits</h3>
+                <p>Creative edits designed to captivate viewers.</p>
+            </div>
+            <div class="card">
+                <h3>Promotional Content</h3>
+                <p>High-quality promotional videos for brands.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Instagram Editing</h3>
+                <p>Customized Instagram reels and stories.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media Management</h3>
+                <p>Comprehensive social media strategies.</p>
+            </div>
+            <div class="card">
+                <h3>Consultation</h3>
+                <p>Professional advice for your online presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>At Evolvi._.Vids, we specialize in video editing and social media management. Our team is dedicated to providing top-notch video editing and social media management services tailored to your unique needs. We believe in collaboration and communication to ensure your vision is realized in the final product.</p>
+        <p>Email us at <a href="mailto:evolvi._.vids@outlook.com">evolvi._.vids@outlook.com</a></p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 evolvi._.vids. All rights reserved.</p>
+    <p>For inquiries, email us at <a href="mailto:evolvi._.vids@outlook.com">evolvi._.vids@outlook.com</a></p>
+    <p>Follow us on <a href="https://www.instagram.com/evolvi._.vids/" target="_blank">Instagram</a></p> <!-- Instagram Link in footer -->
+</footer>
+
+<script>
+    // Scroll effect for header
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const header = document.getElementById("header");
+        
+        if (scrollTop > lastScrollTop){
+            header.style.top = "-70px"; // Hide header
+        } else {
+            header.style.top = "0"; // Show header
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>
+
+</body>
+</html>
